@@ -19,11 +19,12 @@
         background-color:#CDE3FF;  font-size:10pt;
         padding:10px;       font-family:"Arial";
         
+        
     }
     #mp .panel-details{
         background-color:#B1D8F8;
         padding:10px;       font-family:"Arial";
-        height: 370px    
+        height: 340px    
     }
     #mp .panel-footer{
         background-color:#BAEFFC;
@@ -53,9 +54,9 @@
 </style>
 <script type="text/template" id="Afterschool">
     <div class='panel panel-default'>
-        <div class='panel-borough'>{{borough_community}}</div>
+        <div class='panel-borough'>{{site_name}}</div>
         <div class='panel-details'>
-            <h2><marquee>{{program_type}}</marquee><br><br>{{agency}}<br><br>{{site_name}}</h2>
+            <h2><marquee>{{program_type}}</marquee><br><br>{{agency}}<br></h2>
             <p>Borough: {{borough_community}}<br></p>
             <p>Contact number: {{contact_number}}</p>
             <p>Required age: {{grade_level_age_group}}</p>   
@@ -68,10 +69,10 @@
     </div>
 </script>
 <script>
-function loadJSON(){       	
+function loadJSON(){        
     $.getJSON("https://data.cityofnewyork.us/resource/fu5n-kurd.json", function(result){        
         NYCprograms(result);
-    });	
+    }); 
 }
 function NYCprograms(data){
     var build = "";
